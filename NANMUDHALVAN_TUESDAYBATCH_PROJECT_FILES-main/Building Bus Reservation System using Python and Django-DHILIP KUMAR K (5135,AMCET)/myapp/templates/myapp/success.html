@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %} {% block content %}
+
+<div class="container my-5 text-info">
+    <div class="row justify-content-center text-info">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-info">
+            <form action="{% url 'signout' %}" method="post">
+                {% csrf_token %} {{user}} successful login! {{id}}
+                <div class="pull-right text-info">
+                    <button type="Submit" class="btn btn-success float-right">Sign out</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
